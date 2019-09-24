@@ -24,15 +24,16 @@ exports.postAddProduct=(req,res,next)=>{
     console.log("This is another middleware");
     //console.log('shop.js',adminData.product);
   //  res.sendFile(path.join(rootDir,'views','shop.html'))
-  const product = Product.fetchAll((products)=>{
-   res.render("shop",{prods:product ,pageTitle:"shop" ,
-   path:'/' ,hasProducts:product.length > 0,
+  const product = Product.fetchAll((product)=>{
+   res.render("shop",{prods:product ,pageTitle:"shop" 
+   ,path:'/' ,hasProducts:product.length > 0,
    productCSS: true,
    activeShop: true
    
  }
    
     ); // inject value to the views
+
   });
  
  
