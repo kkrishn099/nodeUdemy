@@ -33,7 +33,7 @@ app.set("view engine","hbs"); */ // set templates engine for handlebars
 
 app.use(bodyParser.urlencoded({extended:false}));
 app.use(express.static(path.join(__dirname,'public'))) // to set the path of static content
-app.use(adminRoutes);
+app.use('/admin',adminRoutes,);
 //app.use(adminData.routes);
 app.use(shopRoute);
 
